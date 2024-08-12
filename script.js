@@ -1,4 +1,4 @@
-const card = document.querySelector('.card');
-card.addEventListener('click', () => {
-  card.classList.toggle('flipped');
+const giftCard = document.querySelector('.gift-card');
+giftCard.addEventListener('click', () => {
+    giftCard.classList.toggle('flipped');
 });
