@@ -9,8 +9,8 @@ body {
 }
 
 .scene {
-    width: 400px; /* Increased width */
-    height: 250px; /* Increased height */
+    width: 450px; /* Increased width */
+    height: 300px; /* Increased height */
     perspective: 1000px;
 }
 
