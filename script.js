@@ -1,10 +1,22 @@
 const giftCard = document.querySelector('.gift-card');
 
-// Handle click and touch events
-giftCard.addEventListener('click', () => {
-    giftCard.classList.toggle('flipped');
-});
+// Track the flipping state
+let isFlipped = false;
 
-giftCard.addEventListener('touchstart', () => {
-    giftCard.classList.toggle('flipped');
+// Handle both click and touchstart events
+function toggleFlip() {
+    isFlipped = !isFlipped;
+    if (isFlipped) {
+        giftCard.classList.add('flipped');
+    } else {
+        giftCard.classList.remove('flipped');
+    }
+}
+
+// Use `click` and `touchstart` to handle interactions
+giftCard.addEventListener('click', toggleFlip);
+giftCard.addEventListener('touchstart', (event) => {
+    // Prevent multiple triggers by disabling the default behavior
+    event.preventDefault();
+    toggleFlip();
 });
