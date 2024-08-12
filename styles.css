@@ -54,3 +54,23 @@ body {
     transform: rotateY(180deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+/* Existing styles ... */
+
+@media (max-width: 600px) {
+    .scene {
+        width: 200px;
+        height: 150px;
+    }
+
+    .gift-card {
+        transform: scale(0.85);
+    }
+
+    .gift-card:hover {
+        transform: scale(1) rotateY(180deg);
+    }
+
+    .gift-card-front, .gift-card-back {
+        font-size: 18px;
+    }
+}
